@@ -56,8 +56,8 @@ function bootstrap_modal_get( $post_id = 0 ){
 		$latest_modal_id = absint( $latest_modal[0]->ID );
 	}
 	// grab title and post content and return them
-	$data['title'] = get_the_title( $latest_modal[0]->ID );
-	$data['content'] = $latest_modal[0]->post_content;
+	$data['title']   = get_the_title( $latest_modal[0]->ID );
+	$data['content'] = do_shortcode( wp_kses_post( $latest_modal[0]->post_content ) );
 	// return the data array
 	return $data;
 };
