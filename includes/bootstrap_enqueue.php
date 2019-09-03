@@ -19,7 +19,7 @@ function bootstrap_modal_enqueue() {
 		$bs_styles,
 		// version number is set to the file mod time
 		// you may want to use the actual version number of BS your using instead
-		filemtime( $bs_scripts ),
+		filemtime( $bs_scripts )
 	);
 }
 
