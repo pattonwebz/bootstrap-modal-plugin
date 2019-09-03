@@ -7,9 +7,7 @@ function bootstrap_modal_enqueue() {
 		'bootstrap-scripts',
 		$bs_scripts,
 		( 'jQuery' ),
-		// version number is set to the file mod time
-		// you may want to use the actual version number of BS your using instead
-		filemtime( $bs_scripts ),
+		'v4.0.0-alpha.6',
 		true
 	);
 	// directory of stylesheet
@@ -17,9 +15,7 @@ function bootstrap_modal_enqueue() {
 	wp_enqueue_script(
 		'bootstrap-styles',
 		$bs_styles,
-		// version number is set to the file mod time
-		// you may want to use the actual version number of BS your using instead
-		filemtime( $bs_scripts )
+		'v4.0.0-alpha.6'
 	);
 }
 
